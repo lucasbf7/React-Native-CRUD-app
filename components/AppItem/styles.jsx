@@ -11,7 +11,7 @@ export const TextItem = styled.Text`
 `;
 
 export const ContainerBtn = styled.View`
-    flexDIrection: row-reverse;
+    flexDirection: row-reverse;
     alignItems: flex-end;
     borderBottomWidth: 1px;
     borderBottomColor: #ccc;
@@ -20,7 +20,7 @@ export const ContainerBtn = styled.View`
 `;
 
 export const DelBtn = styled.TouchableOpacity`
-    marginBottom: 10px;
+    marginLeft: 10px;
     height: 40px;
     width: 40px;
     backgroundColor: #ec2300;
