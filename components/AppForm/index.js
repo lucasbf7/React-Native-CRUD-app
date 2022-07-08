@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import * as C from './styles'
+import * as C from './styles';
+import AsyncStorage from '@react-native-async-storage/async-storage';
  
 export default function AppForm({ navigation }) {
     const [titulo, setTitulo] = useState('');
@@ -8,9 +9,16 @@ export default function AppForm({ navigation }) {
 
     function handleTitleChange(titulo){ setTitulo(titulo); }
     function handleDescriptionChange(descricao){ setDescricao(descricao); }
-    function handleButtonPress(){
-        console.log({id: newDate().getTime(),titulo, descricao});
-        navigation.navigate("AppList");
+    async function handleButtonPress(){
+        const listItem = {id: new Date().getTime(), titulo, descricao: parseInt(descricao)};
+        let savedItems = []
+        const response = await AsyncStorage.getItem('items');
+
+        if(response) savedItems = JSON.parse(response);
+        savedItems.push(listItem);
+
+        await AsyncStorage.setItem('items', JSON.stringify(savedItems));
+        navigation.navigate("AppList", listItem);
     }
 
     return (
