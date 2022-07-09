@@ -21,7 +21,7 @@ Antes de mais nada é necessário baixar em um dispositivo móvel o app
 
 Para rodar o repositório é necessário clonar o mesmo primeiramente:
 ```
-git clone
+git clone https://github.com/lucasbf7/React-Native-CRUD-app.git
 ```
 Feito isso, abra o projeto e rode um: 
 ```
