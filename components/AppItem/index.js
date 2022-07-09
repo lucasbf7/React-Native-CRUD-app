@@ -33,7 +33,8 @@ export default function AppItem(props) {
 
     return(
         <C.Container>
-            <C.TextItem>{props.item}</C.TextItem>
+            <C.TextItem>{props.titulo}</C.TextItem>
+            <C.TextItem>{props.descricao}</C.TextItem>
             <C.ContainerBtn>
                 <C.DelBtn onPress={handleDeletePress}>
                     <C.BtnText>X</C.BtnText>

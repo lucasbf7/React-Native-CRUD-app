@@ -12,7 +12,7 @@ export default function AppForm({ route, navigation }) {
         if(!route.params) return;
         setTitulo(route.params.titulo);
         setDescricao(route.params.descricao);
-      }, [route])
+    }, [route])
 
     function handleTitleChange(titulo){ setTitulo(titulo); }
     function handleDescriptionChange(descricao){ setDescricao(descricao); }
