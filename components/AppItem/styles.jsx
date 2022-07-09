@@ -45,8 +45,3 @@ shadowOpacity: 10;
 shadowColor: #ccc;
 alignItems: center;
 `;
-
-export const BtnText = styled.Text`
-    color: #fff;
-    fontWeight: bold;
-`;
